@@ -14,27 +14,26 @@ import os
 
 
 def main():
+
     outfile = './vic_report.txt'
 
     clusters_path = './QS_Partitions_CSV'
 
-    cluster_files = os.listdir(clusters_path)
+    cluster_files = [f for f in os.listdir(clusters_path) if f.endswith('.csv')]
     cluster_files.sort()
 
     all_vs = []
-
+    all_scores = []
     f = open(outfile,'w')
     f.write('=====VIC Cluster Validation Report=====\n\n')
 
-    classifiers = ['random_forest','svm','naive_bayes','lda','gradient_boosting']
+    classifiers = ['random_forest','svm','naive_bayes','lda','gradient_boosting','mlp']
 
     f.write('Num of Classifiers: {}\n'.format(len(classifiers)))
     f.write('Chosen Classifiers:\n')
     for classifier in classifiers:
         f.write('\t{}\n'.format(classifier))
     f.write('\n\n')
-    #with open('./vic_report.txt','w') as f:
-        #f.write('=====VIC Cluster Validation Report=====\n\n')
 
     for cluster_file in cluster_files:
 
@@ -64,21 +63,21 @@ def main():
 
                 v_prime = v_prime + this_auc
 
+            all_scores.append(v_prime/10)
+
             if v_prime/10 > v:
                 best_classifier = classifier
                 v = v_prime/10
             #v = max(v,v_prime/10)
-
+        #print(all_scores)
         print('\nDone! V = {}\n'.format(v))
         all_vs.append(v)
 
-        #with open('./vic_report.txt', 'w') as f:
         f.write('{}:\n\tv = {}\n\tBest Classifier: {}\n'.format(cluster_file.split('.')[0],v,best_classifier))
 
     max_v = np.argmax(all_vs)
     print("Max v: {}".format(cluster_files[max_v].split('.')[0]))
 
-    #with open('./vic_report.txt', 'w') as f:
     f.write('\n\n==========\n\n'.format(cluster_file,v))
     f.write('Best v value for partition {} with {}'.format(cluster_files[max_v].split('.')[0],all_vs[max_v]))
     print('Finished!: Report saved in {}'.format(outfile))
