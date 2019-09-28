@@ -10,7 +10,7 @@ Chosen Classifiers:
 
 
 QS_Split075:
-	v = 0.7687140637140637
+	v = 0.7753807303807304
 	Best Classifier: gradient_boosting
 QS_Split076:
 	v = 0.7692912642912643
@@ -22,40 +22,40 @@ QS_Split078:
 	v = 0.7608630258630258
 	Best Classifier: random_forest
 QS_Split079:
-	v = 0.7733361083361083
+	v = 0.7661932511932512
 	Best Classifier: gradient_boosting
 QS_Split080:
-	v = 0.7805644355644356
+	v = 0.7847311022311023
 	Best Classifier: gradient_boosting
 QS_Split081:
 	v = 0.7772274947274946
 	Best Classifier: random_forest
 QS_Split082:
-	v = 0.7952253302253303
+	v = 0.8052253302253302
 	Best Classifier: gradient_boosting
 QS_Split083:
-	v = 0.8028941891441892
+	v = 0.8084497446997447
 	Best Classifier: gradient_boosting
 QS_Split084:
-	v = 0.8144982794982795
+	v = 0.811485458985459
 	Best Classifier: gradient_boosting
 QS_Split085:
-	v = 0.8196267621267623
+	v = 0.8187934287934289
 	Best Classifier: gradient_boosting
 QS_Split086:
-	v = 0.8075434287934288
+	v = 0.8164323176823178
 	Best Classifier: gradient_boosting
 QS_Split087:
-	v = 0.8290116827616828
+	v = 0.8304402541902542
 	Best Classifier: gradient_boosting
 QS_Split088:
-	v = 0.8286996336996337
+	v = 0.8236996336996336
 	Best Classifier: gradient_boosting
 QS_Split089:
-	v = 0.8436568986568986
+	v = 0.8424068986568987
 	Best Classifier: gradient_boosting
 QS_Split090:
-	v = 0.8701007326007325
+	v = 0.8638507326007325
 	Best Classifier: gradient_boosting
 QS_Split091:
 	v = 0.8853632478632477
@@ -64,28 +64,28 @@ QS_Split092:
 	v = 0.8966890054390054
 	Best Classifier: gradient_boosting
 QS_Split093:
-	v = 0.9121386946386947
+	v = 0.9163053613053614
 	Best Classifier: gradient_boosting
 QS_Split094:
-	v = 0.920530303030303
+	v = 0.9159848484848485
 	Best Classifier: gradient_boosting
 QS_Split095:
 	v = 0.9425174825174827
 	Best Classifier: gradient_boosting
 QS_Split096:
-	v = 0.9304094516594518
+	v = 0.9359650072150073
 	Best Classifier: gradient_boosting
 QS_Split097:
-	v = 0.949601370851371
+	v = 0.9551569264069265
 	Best Classifier: gradient_boosting
 QS_Split098:
-	v = 0.9600757575757575
+	v = 0.9646212121212121
 	Best Classifier: gradient_boosting
 QS_Split099:
 	v = 0.975037878787879
 	Best Classifier: gradient_boosting
 QS_Split100:
-	v = 0.9954545454545455
+	v = 0.9883116883116884
 	Best Classifier: gradient_boosting
 QS_Split101:
 	v = 0.9949999999999999
@@ -103,58 +103,58 @@ QS_Split105:
 	v = 0.938560606060606
 	Best Classifier: gradient_boosting
 QS_Split106:
-	v = 0.9197113997113997
+	v = 0.9298124098124099
 	Best Classifier: gradient_boosting
 QS_Split107:
 	v = 0.9115945165945167
 	Best Classifier: gradient_boosting
 QS_Split108:
-	v = 0.9028823953823955
+	v = 0.9078823953823953
 	Best Classifier: gradient_boosting
 QS_Split109:
 	v = 0.8802182539682539
 	Best Classifier: gradient_boosting
 QS_Split110:
-	v = 0.847958152958153
+	v = 0.8424025974025975
 	Best Classifier: gradient_boosting
 QS_Split111:
-	v = 0.8463510101010101
+	v = 0.8668686868686869
 	Best Classifier: gradient_boosting
 QS_Split112:
-	v = 0.8641161616161617
+	v = 0.859949494949495
 	Best Classifier: gradient_boosting
 QS_Split113:
-	v = 0.8502651515151516
+	v = 0.8481818181818183
 	Best Classifier: gradient_boosting
 QS_Split114:
-	v = 0.8669318181818182
+	v = 0.8731818181818183
 	Best Classifier: gradient_boosting
 QS_Split115:
-	v = 0.8407077644577644
+	v = 0.8323149073149073
 	Best Classifier: gradient_boosting
 QS_Split116:
 	v = 0.804579170829171
 	Best Classifier: random_forest
 QS_Split117:
-	v = 0.8181938894438895
+	v = 0.8315272227772228
 	Best Classifier: gradient_boosting
 QS_Split118:
-	v = 0.8159182484182483
+	v = 0.8259182484182483
 	Best Classifier: gradient_boosting
 QS_Split119:
-	v = 0.8378825341325342
+	v = 0.825739676989677
 	Best Classifier: gradient_boosting
 QS_Split120:
-	v = 0.8309032634032635
+	v = 0.8259032634032636
 	Best Classifier: gradient_boosting
 QS_Split121:
-	v = 0.8384561272061273
+	v = 0.8254433066933068
 	Best Classifier: gradient_boosting
 QS_Split122:
-	v = 0.8321237096237096
+	v = 0.8202189477189478
 	Best Classifier: gradient_boosting
 QS_Split123:
-	v = 0.8151606726606728
+	v = 0.8118273393273393
 	Best Classifier: gradient_boosting
 QS_Split124:
 	v = 0.8087512487512487
@@ -163,4 +163,4 @@ QS_Split124:
 
 ==========
 
-Best v value for partition QS_Split100 with 0.9954545454545455
+Best v value for partition QS_Split101 with 0.9949999999999999

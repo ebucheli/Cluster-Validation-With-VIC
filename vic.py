@@ -1,9 +1,7 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-
 from sklearn.model_selection import KFold
-
 from sklearn.metrics import roc_curve, auc
 
 import models
@@ -11,13 +9,15 @@ import models
 from tqdm import tqdm
 
 import os
+import click
 
+@click.command()
+@click.option('--clusters_path',
+              default = './QS_Partitions_CSV',
+              help = 'Directory containing the partitions to analyize')
+@click.option('--outfile', default = './vic_report1.txt', help = 'Name for report file')
 
-def main():
-
-    outfile = './vic_report.txt'
-
-    clusters_path = './QS_Partitions_CSV'
+def main(clusters_path, outfile):
 
     cluster_files = [f for f in os.listdir(clusters_path) if f.endswith('.csv')]
     cluster_files.sort()
@@ -27,7 +27,8 @@ def main():
     f = open(outfile,'w')
     f.write('=====VIC Cluster Validation Report=====\n\n')
 
-    classifiers = ['random_forest','svm','naive_bayes','lda','gradient_boosting','mlp']
+    classifiers = ['random_forest','svm','naive_bayes','lda','gradient_boosting']
+
 
     f.write('Num of Classifiers: {}\n'.format(len(classifiers)))
     f.write('Chosen Classifiers:\n')
