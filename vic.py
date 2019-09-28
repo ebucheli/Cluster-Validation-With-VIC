@@ -15,7 +15,7 @@ import click
 @click.option('--clusters_path',
               default = './QS_Partitions_CSV',
               help = 'Directory containing the partitions to analyize')
-@click.option('--outfile', default = './vic_report1.txt', help = 'Name for report file')
+@click.option('--outfile', default = './vic_report.txt', help = 'Name for report file')
 
 def main(clusters_path, outfile):
 

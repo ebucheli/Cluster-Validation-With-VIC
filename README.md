@@ -26,3 +26,11 @@ This implementation contains 5 classifiers:
 However it is easy to add new classifiers. This repository follows Scikit-Learn's workflow and thus the easiest way to add a model is by using sklearn implementations. You need to add an identifier to the list in line 30 of `vic.py` and then add the corresponding line/lines to define the classifier in the function `train_and_test()` defined in `models.py`. If it's not a model from sklearn you must create a Class with the methods fit and predict, that train the model and make inference over some input correspondingly. An example MLP programed in TensorFlow is included as an example.
 
 ## Usage
+
+To test the current implementation all you need is:
+
+`python vic.py`
+
+The program will then run VIC on 50 partitions of our QS Dataset with cluster separations between rank 75 and 125. A report is generated showing the value of v for each partition and the classifier with the highest accuracy.
+
+There are two options available, if you want to try some other data use the flag `--clusters_path` to specify a directory with one or more data sets in 'csv' format. You can also use the `--outfile` flag to specify a new name for the generated report, default is `./vic_report.txt`.
