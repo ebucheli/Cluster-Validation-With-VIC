@@ -27,7 +27,7 @@ This implementation contains 5 classifiers:
 
 ## Adding New Classifiers
 
-This repository follows Scikit-Learn's workflow and thus the easiest way to add a model is by using sklearn implementations. You need to add an identifier to the list in line 30 of `vic.py` and then add the corresponding line/lines to select and define the classifier in the function `train_and_test()` defined in `models.py`. If it's not a model from sklearn you must create a Class that must include the methods `fit(x,y)` and `predict(x)`, that train the model and make inference over some input correspondingly. Two examples using this method for custom classifiers are included a Logistic Regression model in numpy and a Multi Layer Perceptron in TensorFlow (if you want to try MLP un comment the corresponding class an condition in `models.py`).
+This repository follows Scikit-Learn's workflow and thus the easiest way to add a model is by using sklearn implementations. You need to add an identifier to the list in line 30 of `vic.py` and then add the corresponding line/lines to select and define the classifier in the function `train_and_test()` defined in `models.py`. If it's not a model from sklearn you must create a Class that includes the methods `fit(x,y)` and `predict(x)`, that train the model and make inference over some input correspondingly. Two examples using this method for custom classifiers are included; a Logistic Regression model in numpy and a Multi Layer Perceptron in TensorFlow (if you want to try MLP un comment the corresponding class an condition in `models.py`).
 
 ## Usage
 
