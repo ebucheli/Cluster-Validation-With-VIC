@@ -8,11 +8,11 @@ VIC is a method that uses a set of supervised classifiers and k-fold cross valid
 
 1. set v = 0
 1. For each classifier.
-  1. Set v' = 0
-  1. Divide data in k folds
-  1. For each fold.
-    1. Train with four remaining folds and test AUC with current fold.
-    1. Update v' = v'+AUC(this_fold)
+    1. Set v' = 0
+    1. Divide data in k folds
+    1. For each fold.
+        1. Train with four remaining folds and test AUC with current fold.
+        1. Update v' = v'+AUC(this_fold)
 1. Update v = max(v,v'/k)
 
 ## The Classifiers
