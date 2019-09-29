@@ -6,14 +6,14 @@ This implementation uses a custom database of scientometrics data for the QS 201
 
 VIC is a method that uses a set of supervised classifiers and k-fold cross validation to evaluate a partition the algorithm works likewise.
 
-1. set v = 0
-1. For each classifier.
-    1. Set v' = 0
-    1. Divide data in k folds
-    1. For each fold.
-        1. Train with four remaining folds and test AUC with current fold.
-        1. Update v' = v'+AUC(this_fold)
-1. Update v = max(v,v'/k)
+* set v = 0
+* For each classifier.
+    * Set v' = 0
+    * Divide data in k folds
+    * For each fold.
+        * Train with four remaining folds and test AUC with current fold.
+        * Update v' = v'+AUC(this_fold)
+* Update v = max(v,v'/k)
 
 ## The Classifiers
 
