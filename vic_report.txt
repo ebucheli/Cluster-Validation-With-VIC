@@ -1,12 +1,13 @@
 =====VIC Cluster Validation Report=====
 
-Num of Classifiers: 5
+Num of Classifiers: 6
 Chosen Classifiers:
 	random_forest
 	svm
 	naive_bayes
 	lda
 	gradient_boosting
+	logistic_regression
 
 
 QS_Split075:
@@ -22,37 +23,37 @@ QS_Split078:
 	v = 0.7608630258630258
 	Best Classifier: random_forest
 QS_Split079:
-	v = 0.7661932511932512
+	v = 0.7779194416694417
 	Best Classifier: gradient_boosting
 QS_Split080:
-	v = 0.7847311022311023
+	v = 0.7755644355644356
 	Best Classifier: gradient_boosting
 QS_Split081:
-	v = 0.7772274947274946
-	Best Classifier: random_forest
+	v = 0.7921685259185259
+	Best Classifier: gradient_boosting
 QS_Split082:
-	v = 0.8052253302253302
+	v = 0.8046697746697747
 	Best Classifier: gradient_boosting
 QS_Split083:
-	v = 0.8084497446997447
+	v = 0.8140053002553003
 	Best Classifier: gradient_boosting
 QS_Split084:
-	v = 0.811485458985459
+	v = 0.8052354589854589
 	Best Classifier: gradient_boosting
 QS_Split085:
-	v = 0.8187934287934289
+	v = 0.8285156510156512
 	Best Classifier: gradient_boosting
 QS_Split086:
 	v = 0.8164323176823178
 	Best Classifier: gradient_boosting
 QS_Split087:
-	v = 0.8304402541902542
+	v = 0.8254402541902541
 	Best Classifier: gradient_boosting
 QS_Split088:
-	v = 0.8236996336996336
+	v = 0.8286996336996337
 	Best Classifier: gradient_boosting
 QS_Split089:
-	v = 0.8424068986568987
+	v = 0.8492124542124543
 	Best Classifier: gradient_boosting
 QS_Split090:
 	v = 0.8638507326007325
@@ -61,7 +62,7 @@ QS_Split091:
 	v = 0.8853632478632477
 	Best Classifier: gradient_boosting
 QS_Split092:
-	v = 0.8966890054390054
+	v = 0.9029390054390054
 	Best Classifier: gradient_boosting
 QS_Split093:
 	v = 0.9163053613053614
@@ -73,19 +74,19 @@ QS_Split095:
 	v = 0.9425174825174827
 	Best Classifier: gradient_boosting
 QS_Split096:
-	v = 0.9359650072150073
+	v = 0.9304094516594518
 	Best Classifier: gradient_boosting
 QS_Split097:
-	v = 0.9551569264069265
+	v = 0.949601370851371
 	Best Classifier: gradient_boosting
 QS_Split098:
-	v = 0.9646212121212121
+	v = 0.9583712121212121
 	Best Classifier: gradient_boosting
 QS_Split099:
 	v = 0.975037878787879
 	Best Classifier: gradient_boosting
 QS_Split100:
-	v = 0.9883116883116884
+	v = 0.9954545454545455
 	Best Classifier: gradient_boosting
 QS_Split101:
 	v = 0.9949999999999999
@@ -103,7 +104,7 @@ QS_Split105:
 	v = 0.938560606060606
 	Best Classifier: gradient_boosting
 QS_Split106:
-	v = 0.9298124098124099
+	v = 0.9242568542568543
 	Best Classifier: gradient_boosting
 QS_Split107:
 	v = 0.9115945165945167
@@ -118,43 +119,43 @@ QS_Split110:
 	v = 0.8424025974025975
 	Best Classifier: gradient_boosting
 QS_Split111:
-	v = 0.8668686868686869
+	v = 0.8600631313131313
 	Best Classifier: gradient_boosting
 QS_Split112:
-	v = 0.859949494949495
+	v = 0.8533207070707072
 	Best Classifier: gradient_boosting
 QS_Split113:
-	v = 0.8481818181818183
+	v = 0.8548106060606061
 	Best Classifier: gradient_boosting
 QS_Split114:
 	v = 0.8731818181818183
 	Best Classifier: gradient_boosting
 QS_Split115:
-	v = 0.8323149073149073
+	v = 0.8519577644577645
 	Best Classifier: gradient_boosting
 QS_Split116:
-	v = 0.804579170829171
-	Best Classifier: random_forest
+	v = 0.8084940059940061
+	Best Classifier: gradient_boosting
 QS_Split117:
-	v = 0.8315272227772228
+	v = 0.8265272227772229
 	Best Classifier: gradient_boosting
 QS_Split118:
-	v = 0.8259182484182483
+	v = 0.8159182484182483
 	Best Classifier: gradient_boosting
 QS_Split119:
-	v = 0.825739676989677
+	v = 0.8378825341325342
 	Best Classifier: gradient_boosting
 QS_Split120:
-	v = 0.8259032634032636
+	v = 0.8170571095571096
 	Best Classifier: gradient_boosting
 QS_Split121:
-	v = 0.8254433066933068
+	v = 0.8241933066933068
 	Best Classifier: gradient_boosting
 QS_Split122:
-	v = 0.8202189477189478
+	v = 0.8287903762903763
 	Best Classifier: gradient_boosting
 QS_Split123:
-	v = 0.8118273393273393
+	v = 0.8175993450993451
 	Best Classifier: gradient_boosting
 QS_Split124:
 	v = 0.8087512487512487
@@ -163,4 +164,4 @@ QS_Split124:
 
 ==========
 
-Best v value for partition QS_Split101 with 0.9949999999999999
+Best v value for partition QS_Split100 with 0.9954545454545455

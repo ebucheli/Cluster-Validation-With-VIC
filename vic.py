@@ -9,6 +9,7 @@ import models
 from tqdm import tqdm
 
 import os
+import json
 import click
 
 @click.command()
@@ -21,14 +22,13 @@ def main(clusters_path, outfile):
 
     cluster_files = [f for f in os.listdir(clusters_path) if f.endswith('.csv')]
     cluster_files.sort()
-
+    report_dict = dict([])
     all_vs = []
-    all_scores = []
     f = open(outfile,'w')
     f.write('=====VIC Cluster Validation Report=====\n\n')
 
     classifiers = ['random_forest','svm','naive_bayes','lda','gradient_boosting', 'logistic_regression']
-
+    #classifiers = ['random_forest','svm','naive_bayes','lda']
 
     f.write('Num of Classifiers: {}\n'.format(len(classifiers)))
     f.write('Chosen Classifiers:\n')
@@ -37,7 +37,7 @@ def main(clusters_path, outfile):
     f.write('\n\n')
 
     for cluster_file in cluster_files:
-
+        partition_scores = []
         print('Working on Partition {}'.format(cluster_file.split('.')[0]))
 
         df = pd.read_csv(os.path.join(clusters_path,cluster_file))
@@ -61,16 +61,22 @@ def main(clusters_path, outfile):
                 y_train, y_test = y[train_index], y[test_index]
 
                 this_auc = models.train_and_test(classifier,X_train,y_train,X_test,y_test)
-
                 v_prime = v_prime + this_auc
 
-            all_scores.append(v_prime/10)
+            partition_scores.append(v_prime/10)
 
             if v_prime/10 > v:
                 best_classifier = classifier
                 v = v_prime/10
-            #v = max(v,v_prime/10)
-        print(all_scores)
+            partition_name = cluster_file.split('.')[0]
+            report_dict[partition_name] = dict([('best_classifier',0),('scores',0),('v',0)])
+            report_dict[partition_name]['best_classifier'] = best_classifier
+            report_dict[partition_name]['scores'] = partition_scores
+            report_dict[partition_name]['v'] = v
+
+        with open('report.json', 'w') as fp:
+            json.dump(report_dict, fp)
+
         print('\nDone! V = {}\n'.format(v))
         all_vs.append(v)
 
