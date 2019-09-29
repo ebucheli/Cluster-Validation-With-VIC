@@ -13,7 +13,7 @@ VIC is a method that uses a set of supervised classifiers and k-fold cross valid
     * For each fold.
         * Train with four remaining folds and test AUC with current fold.
         * Update v' = v'+AUC(this_fold)
-* Update v = max(v,v'/k)
+    * Update v = max(v,v'/k)
 
 ## The Classifiers
 
