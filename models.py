@@ -6,6 +6,8 @@ from sklearn.ensemble import GradientBoostingClassifier
 
 from sklearn.metrics import roc_curve, auc
 
+import numpy as np
+
 #import tensorflow as tf
 
 def train_and_test(classifier, X_train,y_train,X_test,y_test):
@@ -20,8 +22,10 @@ def train_and_test(classifier, X_train,y_train,X_test,y_test):
         clf = LinearDiscriminantAnalysis(solver = 'lsqr')
     elif classifier == 'gradient_boosting':
         clf = GradientBoostingClassifier()
-    elif classifier == 'mlp':
-        clf = MLP()
+    elif classifier == 'logistic_regression':
+        clf = LogisticRegression()
+    #elif classifier == 'mlp':
+        #clf = MLP()
     else:
         print("I can\'t use classifier {}".format(classifier))
         exit()
@@ -32,6 +36,37 @@ def train_and_test(classifier, X_train,y_train,X_test,y_test):
     this_auc = auc(fpr,tpr)
 
     return this_auc
+
+class LogisticRegression:
+
+    def __init__(self, input_size = 758, num_classes = 1,iters = 5000, lr = 0.01):
+
+        self.input_size = input_size
+        self.num_classes = num_classes
+        self.lr = lr
+        self.iters = iters
+
+        self.w = np.random.randn(self.input_size,)
+        self.b = 1
+
+    def sigmoid(self,z):
+        return 1/(1+np.exp(-z))
+
+    def fit(self,x,y):
+
+        for i in range(self.iters):
+
+            y_hat = self.sigmoid(np.dot(x,self.w)+self.b)
+
+            dW = (1/self.input_size)*(np.dot((y_hat-y).T,x))
+            db = np.mean(y_hat-y)
+
+            self.w = self.w - self.lr*dW
+            self.b = self.b - self.lr*db
+
+    def predict(self,x):
+        return self.sigmoid(np.dot(x,self.w)+self.b)
+
 
 # class MLP:
 #     def __init__(self,hidden_units = 64,hidden_layers = 2,num_classes = 2,input_size = 758):

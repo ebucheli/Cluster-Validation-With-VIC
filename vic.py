@@ -27,7 +27,7 @@ def main(clusters_path, outfile):
     f = open(outfile,'w')
     f.write('=====VIC Cluster Validation Report=====\n\n')
 
-    classifiers = ['random_forest','svm','naive_bayes','lda','gradient_boosting']
+    classifiers = ['random_forest','svm','naive_bayes','lda','gradient_boosting', 'logistic_regression']
 
 
     f.write('Num of Classifiers: {}\n'.format(len(classifiers)))
@@ -70,7 +70,7 @@ def main(clusters_path, outfile):
                 best_classifier = classifier
                 v = v_prime/10
             #v = max(v,v_prime/10)
-        #print(all_scores)
+        print(all_scores)
         print('\nDone! V = {}\n'.format(v))
         all_vs.append(v)
 
