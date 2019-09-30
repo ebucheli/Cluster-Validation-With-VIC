@@ -45,7 +45,7 @@ There are two options available, if you want to try some other data use the flag
 
 The following figre shows the VIC score for each partition used during our experiments
 
-<img src="./images/vic.png" width="60%">
+<img src="./images/vic.png" width="100%">
 
 For an analysis of the results in our experiments please check `Results Analysis.ipynb`
 
