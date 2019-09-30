@@ -1,10 +1,10 @@
 # Cluster Validation with VIC
 
-VIC is a Cluster Validation technique that uses a set of classifiers to evaluate a given partition of a data set.
+VIC [1] is a Cluster Validation technique that uses a set of classifiers to evaluate a given partition of a data set.
 
 This implementation uses a custom database of Scientometrics data for the QS 2019 Top 200 Universities world wide. For more information on the data set, please check `QS_Dataset_Report.pdf`.
 
-VIC is a method that uses an ensemble of supervised classifiers and k-fold cross validation to evaluate a partition the algorithm works likewise [1].
+VIC is a method that uses an ensemble of supervised classifiers and k-fold cross validation to evaluate a partition the algorithm works likewise.
 
 * set v = 0
 * For each classifier.
@@ -47,4 +47,4 @@ For an analysis of the results in our experiments please check `Results Analysis
 
 ## Bibliography
 
-J. Rodríguez, M. A. Medina-Pérez, A. E. Gutierrez-Rodríguez, R. Monroy, H. Terashima-Marín. [Cluster validation using an ensemble of supervised classifiers(https://www.sciencedirect.com/science/article/abs/pii/S0950705118300091) *Knowledge-Based Systems*, Volume 145 (2018). Pages 134-144.
+[1] J. Rodríguez, M. A. Medina-Pérez, A. E. Gutierrez-Rodríguez, R. Monroy, H. Terashima-Marín. [Cluster validation using an ensemble of supervised classifiers(https://www.sciencedirect.com/science/article/abs/pii/S0950705118300091) *Knowledge-Based Systems*, Volume 145 (2018). Pages 134-144.
