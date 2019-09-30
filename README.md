@@ -43,7 +43,7 @@ There are two options available, if you want to try some other data use the flag
 
 ## Results
 
-The following figre shows the VIC score for each partition used during our experiments
+The following figre shows the VIC score for each partition used during our experiments. The best score was achieved when the clusters are split at rank 81.
 
 <img src="./images/vic.png" width="100%">
 
