@@ -47,7 +47,7 @@ The following figre shows the VIC score for each partition used during our exper
 
 <img src="./images/vic.png" width="100%">
 
-For a complete analysis of the results in our experiments please check `Results Analysis.ipynb`
+For a complete analysis of the results in our experiments please check `Results Analysis.ipynb` and `Cluster_Validation_Using_VIC.pdf`.
 
 
 
