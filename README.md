@@ -47,4 +47,4 @@ For an analysis of the results in our experiments please check `Results Analysis
 
 ## Bibliography
 
-[1] J. Rodríguez, M. A. Medina-Pérez, A. E. Gutierrez-Rodríguez, R. Monroy, H. Terashima-Marín. [Cluster validation using an ensemble of supervised classifiers(https://www.sciencedirect.com/science/article/abs/pii/S0950705118300091) *Knowledge-Based Systems*, Volume 145 (2018). Pages 134-144.
+[1] J. Rodríguez, M. A. Medina-Pérez, A. E. Gutierrez-Rodríguez, R. Monroy, H. Terashima-Marín. [Cluster validation using an ensemble of supervised classifiers](https://www.sciencedirect.com/science/article/abs/pii/S0950705118300091). *Knowledge-Based Systems*, Volume 145 (2018). Pages 134-144.
