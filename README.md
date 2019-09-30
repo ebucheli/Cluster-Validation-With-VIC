@@ -29,7 +29,7 @@ The current implementation uses 6 classifiers:
 
 ## Adding New Classifiers
 
-This repository follows Scikit-Learn's workflow and thus the easiest way to add a model is by using sklearn implementations. You need to add an identifier to the list in line 30 of `vic.py` and then add the corresponding line/lines to select and define the classifier in the function `train_and_test()` defined in `models.py`. If it's not a model from sklearn you must create a Class that includes the methods `fit(x,y)` and `predict(x)` that train the model and make inference over some input correspondingly. Two examples using this method for custom classifiers are included; a Logistic Regression model in numpy and a Multi Layer Perceptron in TensorFlow (if you want to try MLP un-comment the corresponding class an condition in `models.py`).
+This repository follows Scikit-Learn's workflow and thus the easiest way to add a model is by using sklearn implementations. You need to add an identifier to the list in line 36 of `vic.py` and then add the corresponding line/lines to select and define the classifier in the function `train_and_test()` defined in `models.py`. If it's not a model from sklearn you must create a Class that includes the methods `fit(x,y)` and `predict(x)` that train the model and make inference over some input correspondingly. Two examples using this method for custom classifiers are included; a Logistic Regression model in numpy and a Multi Layer Perceptron in TensorFlow (if you want to try MLP un-comment the corresponding class an condition in `models.py`).
 
 ## Usage
 
@@ -37,7 +37,7 @@ To test the current implementation all you need is:
 
 `python vic.py`
 
-The program will then run VIC on 50 partitions of our QS Dataset with cluster separations between rank 75 and 125. A report is generated showing the value of v for each partition and the classifier with the highest accuracy.
+The program will then run VIC on 50 partitions of our QS Dataset with cluster separations between rank 75 and 125. Two files are generated. The txt report shows the value of v for each partition and the classifier with the highest accuracy and includes the best result at the end. The json file stores significant information used in `Results Analysis.ipynb`.
 
 There are two options available, if you want to try some other data use the flag `--clusters_path` to specify a directory with one or more data sets in 'csv' format. You can also use the `--outfile` flag to specify a new name for the generated report, default is `./vic_report.txt`.
 

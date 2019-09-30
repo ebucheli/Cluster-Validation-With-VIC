@@ -11,6 +11,11 @@ import numpy as np
 #import tensorflow as tf
 
 def train_and_test(classifier, X_train,y_train,X_test,y_test):
+    """
+    Train a model specified by "classifier" using X_train and y_train and
+    test it using X_test and, y_test. Returns the AUC obtained with X_test and
+    y_test.
+    """
 
     if classifier == 'random_forest':
         clf = RandomForestClassifier(n_estimators = 100,max_depth = 10,random_state = 0)
@@ -38,6 +43,9 @@ def train_and_test(classifier, X_train,y_train,X_test,y_test):
     return this_auc
 
 class LogisticRegression:
+    """
+    Implement Logistic Regression
+    """
 
     def __init__(self, input_size = 757, num_classes = 1,iters = 5000, lr = 0.01):
 
@@ -53,7 +61,9 @@ class LogisticRegression:
         return 1/(1+np.exp(-z))
 
     def fit(self,x,y):
-
+        """
+        Fit the model with x and y.
+        """
         for i in range(self.iters):
 
             y_hat = self.sigmoid(np.dot(x,self.w)+self.b)
@@ -65,6 +75,9 @@ class LogisticRegression:
             self.b = self.b - self.lr*db
 
     def predict(self,x):
+        """
+        Make a prediction with the model using x.
+        """
         return self.sigmoid(np.dot(x,self.w)+self.b)
 
 
