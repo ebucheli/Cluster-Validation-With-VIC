@@ -45,7 +45,7 @@ def main(clusters_path, outfile):
 
         values = df.values
         y = values[:,-1]
-        x = values[::-1]
+        x = values[:,:-1]
 
         kf = KFold(n_splits = 10, shuffle = True, random_state = 0)
         kf.shuffle

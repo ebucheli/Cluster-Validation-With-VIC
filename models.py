@@ -39,7 +39,7 @@ def train_and_test(classifier, X_train,y_train,X_test,y_test):
 
 class LogisticRegression:
 
-    def __init__(self, input_size = 758, num_classes = 1,iters = 5000, lr = 0.01):
+    def __init__(self, input_size = 757, num_classes = 1,iters = 5000, lr = 0.01):
 
         self.input_size = input_size
         self.num_classes = num_classes
